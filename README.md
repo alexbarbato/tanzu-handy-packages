@@ -36,5 +36,5 @@ kctrl package release -v x.x.x --repo-output ../../repo
 4. Finally publish the `PackageRepository`
 ```bash
 cd ../../repo
-kctrl package repository release
+kctrl package repository release -v x.x.x
 ```
