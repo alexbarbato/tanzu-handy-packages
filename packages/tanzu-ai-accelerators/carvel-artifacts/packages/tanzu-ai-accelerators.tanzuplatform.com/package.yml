@@ -2,17 +2,17 @@ apiVersion: data.packaging.carvel.dev/v1alpha1
 kind: Package
 metadata:
   creationTimestamp: null
-  name: tanzu-ai-accelerators.tanzuplatform.com.0.0.0+build.1688740136
+  name: tanzu-ai-accelerators.tanzuplatform.com.0.0.1
 spec:
   refName: tanzu-ai-accelerators.tanzuplatform.com
-  releasedAt: "2023-07-07T14:30:54Z"
+  releasedAt: "2023-07-07T15:37:26Z"
   template:
     spec:
       deploy:
       - kapp: {}
       fetch:
       - imgpkgBundle:
-          image: us-east5-docker.pkg.dev/pa-rvanvoorhees/carvel/imgpkg/tanzu-handy-packages@sha256:1b6d721e97f2435ff46182e64f099731e13917a351e25406c0f0639b562fd120
+          image: us-east5-docker.pkg.dev/pa-rvanvoorhees/carvel/imgpkg/tanzu-handy-packages@sha256:ebc17db6f0a36fccd67089b8cbad421771d8fde972d0e54adacdbcc6ba852586
       template:
       - ytt:
           paths:
@@ -25,4 +25,4 @@ spec:
     openAPIv3:
       default: null
       nullable: true
-  version: 0.0.0+build.1688740136
+  version: 0.0.1

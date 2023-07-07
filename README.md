@@ -15,10 +15,29 @@ For future updates you just need to update the `PackageRepository` and the subse
 kubectl apply -f repo/package-repository.yml -n $(DESIRED-NAMESPACE)
 ```
 
-## Current Packages
+## Current `Packages`
 
 ### tanzu-ai-accelerators
-A group of accelerators maintained by the ML/AI TSL.
+A group of `Accelerators` maintained by the ML/AI TSL.
 
-This set of accelerators does require internet connectivity and refers to GitHub.
+This set of `Accelerators` does require internet connectivity, the accelerators package from TAP on the cluster, and refers to GitHub.
 
+
+## Developing `Packages`
+
+1. Create a new directory with the `Package` name in the `./packages` directory
+    1. Add a `config` directory where all relevant yaml will go.
+2. Run the following to initialize the `Package`:
+```bash
+cd packages/YOUR-PACKAGE
+kctrl package init
+```
+3. The version and release the `Package` as you see fit:
+```bash
+kctrl package release -v x.x.x --repo-output ../../repo
+```
+4. Finally publish the `PackageRepository`
+```bash
+cd ../../repo
+kctrl package repository release
+```
