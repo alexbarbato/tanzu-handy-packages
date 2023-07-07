@@ -1,0 +1,10 @@
+apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
+kind: Accelerator
+metadata:
+  name: llm-demo
+  namespace: accelerator-system
+spec:
+  git:
+    ref:
+      branch: main
+    url: https://github.com/agapebondservant/llm-demo.git

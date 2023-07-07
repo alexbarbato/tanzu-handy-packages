@@ -1,0 +1,25 @@
+apiVersion: kctrl.carvel.dev/v1alpha1
+kind: PackageBuild
+metadata:
+  creationTimestamp: null
+  name: tanzu-ai-accelerators.tanzuplatform.com
+spec:
+  release:
+  - resource: {}
+  template:
+    spec:
+      app:
+        spec:
+          deploy:
+          - kapp: {}
+          template:
+          - ytt:
+              paths:
+              - ./config
+          - kbld: {}
+      export:
+      - imgpkgBundle:
+          image: us-east5-docker.pkg.dev/pa-rvanvoorhees/carvel/imgpkg/tanzu-handy-packages
+          useKbldImagesLock: true
+        includePaths:
+        - ./config

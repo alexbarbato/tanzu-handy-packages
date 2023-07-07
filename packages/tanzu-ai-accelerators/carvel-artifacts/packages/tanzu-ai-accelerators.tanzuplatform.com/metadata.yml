@@ -1,0 +1,9 @@
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: PackageMetadata
+metadata:
+  creationTimestamp: null
+  name: tanzu-ai-accelerators.tanzuplatform.com
+spec:
+  displayName: tanzu-ai-accelerators
+  longDescription: tanzu-ai-accelerators.tanzuplatform.com
+  shortDescription: tanzu-ai-accelerators.tanzuplatform.com
