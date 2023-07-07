@@ -2,17 +2,14 @@
 A field maintained group of packages that can be installed on a Tanzu Application Clusters to make them all the more useful!
 
 ## Install and use
+We pre-package a `PackageRepository` that will automatically pull in new updates when they exist. It's our recommended approach so you're always on latest unless you have needs otherwise.
+
 ```bash
-kubectl apply -f repo/package-repository.yml -n $(DESIRED-NAMESPACE)
+kubectl apply -f package-repository.yml -n $(DESIRED-NAMESPACE)
 
 # For each Package you desire run the following command for the relevant Package
 # We recommend using the version constraint of >=0.0.0 which effectively equals latest unless there is a need otherwise.
 tanzu package install tanzu-ai-accelerators -p tanzu-ai-accelerators.tanzuplatform.com -v ">=0.0.0" -n tap-install
-```
-
-For future updates you just need to update the `PackageRepository` and the subsequent `Packages` will automatically update.
-```bash
-kubectl apply -f repo/package-repository.yml -n $(DESIRED-NAMESPACE)
 ```
 
 ## Current `Packages`

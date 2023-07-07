@@ -1,0 +1,14 @@
+---
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageRepository
+metadata:
+  name: tanzu-handy-packages
+spec:
+  fetch:
+    imgpkgBundle:
+      image: us-east5-docker.pkg.dev/pa-rvanvoorhees/carvel/imgpkg/tanzu-handy-packages
+      tagSelection:
+        semver:
+          constraints: ">0.0.0"
+          prereleases:
+            identifiers: [build, rc]

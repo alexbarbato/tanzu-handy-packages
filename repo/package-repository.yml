@@ -2,8 +2,8 @@ apiVersion: packaging.carvel.dev/v1alpha1
 kind: PackageRepository
 metadata:
   annotations:
-    kctrl.carvel.dev/repository-version: 0.0.0-build.1688744302
-  creationTimestamp: "2023-07-07T15:38:28Z"
+    kctrl.carvel.dev/repository-version: 0.0.1
+  creationTimestamp: "2023-07-07T20:42:53Z"
   name: tanzu-handy-packages.tanzuplatform.com
 spec:
   fetch:
