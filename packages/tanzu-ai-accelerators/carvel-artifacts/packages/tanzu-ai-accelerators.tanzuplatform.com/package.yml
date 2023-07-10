@@ -2,10 +2,10 @@ apiVersion: data.packaging.carvel.dev/v1alpha1
 kind: Package
 metadata:
   creationTimestamp: null
-  name: tanzu-ai-accelerators.tanzuplatform.com.0.1.0
+  name: tanzu-ai-accelerators.tanzuplatform.com.0.1.1
 spec:
   refName: tanzu-ai-accelerators.tanzuplatform.com
-  releasedAt: "2023-07-10T15:13:15Z"
+  releasedAt: "2023-07-10T16:37:08Z"
   template:
     spec:
       deploy:
@@ -22,7 +22,5 @@ spec:
           - '-'
           - .imgpkg/images.yml
   valuesSchema:
-    openAPIv3:
-      default: null
-      nullable: true
-  version: 0.1.0
+    openAPIv3: null
+  version: 0.1.1

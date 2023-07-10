@@ -32,6 +32,8 @@ kctrl package init
 3. The version and release the `Package` as you see fit:
 ```bash
 kctrl package release -v x.x.x --repo-output ../../repo
+
+# Optional: Provide the `--openapi-schema=false if the package doesn't have a schema`
 ```
 4. Finally publish the `PackageRepository`
 ```bash
