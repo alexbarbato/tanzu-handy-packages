@@ -2,13 +2,13 @@ apiVersion: packaging.carvel.dev/v1alpha1
 kind: PackageRepository
 metadata:
   annotations:
-    kctrl.carvel.dev/repository-version: 0.0.1
-  creationTimestamp: "2023-07-07T20:42:53Z"
+    kctrl.carvel.dev/repository-version: 0.0.3
+  creationTimestamp: "2023-07-10T15:13:52Z"
   name: tanzu-handy-packages.tanzuplatform.com
 spec:
   fetch:
     imgpkgBundle:
-      image: us-east5-docker.pkg.dev/pa-rvanvoorhees/carvel/imgpkg/tanzu-handy-packages@sha256:affa39f9623c7cf4d7ebc63f24b611829d06797642512f8889283e5dc4d407ef
+      image: us-east5-docker.pkg.dev/pa-rvanvoorhees/carvel/imgpkg/tanzu-handy-packages@sha256:28dd0dab8187f3e5c5f62cb5f7102d6fee87968b54c104b25589c48856c56f6c
 status:
   conditions: null
   friendlyDescription: ""
